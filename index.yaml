@@ -2,9 +2,9 @@ apiVersion: v1
 entries:
   kube-plex:
   - apiVersion: v1
-    created: "2021-11-30T22:07:55.591268727Z"
+    created: "2022-03-19T23:18:35.455066277Z"
     description: Plex Media Server
-    digest: 9696c760afae59b9f8712db1289aaf7243a8880908d51366f1f0fa3792178cc2
+    digest: 3444891ca2904d6b26069630fad1bb86392dd02ad18d9a0748953b09478779a8
     home: https://plex.tv/
     icon: https://www.plex.tv/wp-content/uploads/2018/01/pmp-icon-1.png
     keywords:
@@ -17,6 +17,6 @@ entries:
     - https://github.com/ressu/kube-plex
     - https://hub.docker.com/r/plexinc/pms-docker/
     urls:
-    - https://github.com/ressu/kube-plex/releases/download/kube-plex-0.3.1/kube-plex-0.3.1.tgz
+    - https://github.com/herlon214/kube-plex/releases/download/kube-plex-0.3.1/kube-plex-0.3.1.tgz
     version: 0.3.1
-generated: "2021-11-30T22:07:55.591276728Z"
+generated: "2022-03-19T23:18:35.455072577Z"

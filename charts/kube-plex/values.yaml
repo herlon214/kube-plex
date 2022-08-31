@@ -5,7 +5,7 @@
 # Default image configuration for ease of deployment
 image:
   repository: plexinc/pms-docker
-  tag: latest
+  tag: 1.28.2.6151-914ddd2b3
   pullPolicy: Always
 
 # More recommended image configuration is to use a specific tag to make upgrades
@@ -20,9 +20,10 @@ kubePlex:
   loglevel: ""
   image:
     repository: ghcr.io/ressu/kube-plex
-    tag: latest
+    tag: sha-040f189
     pullPolicy: Always
-  resources: {}
+  resources:
+    {}
     # Limits and requests that are applied to the kube-plex transcoding pod. Can
     # be used to request GPU instances for pods as well as normal Kubernetes
     # limits.
@@ -36,7 +37,6 @@ kubePlex:
   # /data and /transcode are cloned to the transcoding pod. A comma separated list.
   #
   ## mounts: /data,/transcode
-
 
 # Override this with the plex claim token from plex.tv/claim
 claimToken: ""
@@ -164,9 +164,10 @@ persistence:
     size: 40Gi
     # Access mode for this volume
     accessMode: ReadWriteMany
-  extraData: []
+  extraData:
+    []
     # Optionally specifify additional Data mounts.  These will be mounted as
-    # /data-${name}.  This should be in the same format as the above 'data', 
+    # /data-${name}.  This should be in the same format as the above 'data',
     # with the additional field 'name'
     # - claimName: "special-tv"
     #   name: 'foo'
@@ -187,7 +188,8 @@ persistence:
     # Access mode for this volume
     accessMode: ReadWriteMany
 
-resources: {}
+resources:
+  {}
   # We usually recommend not to specify default resources and to leave this as a conscious
   # choice for the user. This also increases chances charts run on environments with little
   # resources, such as Minikube. If you do want to specify resources, uncomment the following
@@ -203,13 +205,12 @@ podAnnotations: {}
 
 deploymentAnnotations: {}
 
-proxy: 
+proxy:
   # This allows to set a proxy environment variable, which PMS uses to fetch the token and assets like movie cover
   enable: false
   # http: "http://proxy:8080"
   # https: "https://proxy:8080"
   # noproxy: "localhost,127.0.0.1,10.96.0.0/12,10.244.0.0/12"
-
 
 # allows setting which taints kubeplex tolerates
 tolerations: []
